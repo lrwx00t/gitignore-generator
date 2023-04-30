@@ -5,7 +5,10 @@ A simple way to generate `.gitignore` file using github api.
 ## Usage
 
 ```bash
-❯ cargo run
+❯ cargo install gitignore-generator
+
+# binary is installed
+❯ gitignore-generator
 ? Pick your language/template: › [Page 1/4]
 ❯ AL
   Actionscript
