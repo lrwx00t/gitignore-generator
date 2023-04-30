@@ -12,8 +12,7 @@ pub struct GitIgnore {
 }
 
 fn main() {
-    let mut body: Vec<String> = match ureq::get("https://api.github.com/gitignore/templates").call()
-    {
+    let body: Vec<String> = match ureq::get("https://api.github.com/gitignore/templates").call() {
         Ok(res) => res.into_json().unwrap(),
         Err(error) => panic!("Unable to fetch licenses: {}", error),
     };
@@ -23,13 +22,11 @@ fn main() {
         .items(&body[..])
         .interact()
         .unwrap();
-
-    println!("Enjoy your {}!", body[selection]);
     let url = format!(
         "https://api.github.com/gitignore/templates/{}",
         body[selection]
     );
-    let mut body: GitIgnore = match ureq::get(&url).call() {
+    let body: GitIgnore = match ureq::get(&url).call() {
         Ok(res) => res.into_json().unwrap(),
         Err(error) => panic!("Unable to fetch licenses: {}", error),
     };
