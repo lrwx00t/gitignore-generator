@@ -1,5 +1,6 @@
 # gitignore-generator
-gitignore-generator
+
+A simple way to generate `.gitignore` file using github api.
 
 ## Usage
 
