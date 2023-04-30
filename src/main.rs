@@ -30,8 +30,8 @@ fn main() {
         Ok(res) => res.into_json().unwrap(),
         Err(error) => panic!("Unable to fetch licenses: {}", error),
     };
-    print!("{}", body.source);
-    let filename = "gitignore.demo";
+    // print!("{}", body.source);
+    let filename = ".gitignore";
     let file = match std::fs::metadata(&filename) {
         Ok(_) => {
             let mut input = String::new();
