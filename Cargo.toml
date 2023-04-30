@@ -10,5 +10,5 @@ license = "MIT"
 
 [dependencies]
 dialoguer = "0.10.4"
-serde = { version = "*", features = ["derive"] }
-ureq = { version = "*", features = ["json", "charset"] }
+serde = { version = "1.0.160", features = ["derive"] }
+ureq = { version = "2.6.2", features = ["json", "charset"] }
