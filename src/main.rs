@@ -1,5 +1,5 @@
 use std::fs::OpenOptions;
-use std::io::{self, prelude, BufRead};
+use std::io::{self, BufRead};
 use std::{fs::File, io::Write};
 
 use dialoguer::{theme::ColorfulTheme, Select};
